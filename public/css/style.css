@@ -1,10 +1,61 @@
 h1{
-    color: red;
+    text-align: center;
+    color:black;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
 }
 .completed{
     text-decoration: line-through;
     color: gray;
 }
 .not{
-    text-decoration: underline;
+}
+
+ul {
+    border-top: 1px solid grey;
+    margin: 30px;
+}
+
+li {
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+    margin: 0 auto;
+    width: 70%;
+    max-width: 800px;
+    font-size: 1.5em;
+    list-style-type: circle;
+}
+
+li::marker {
+    font-size: 1.5em;
+}
+
+img {
+    height: .8em;
+    float: right;
+    cursor: pointer;
+
+}
+/* Change cursor to a pointer on the li elements so user can visually see a clicking action is available */
+span {
+    cursor: pointer;
+}
+
+a {
+    /* Moving logout to the top right corner */
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+input {
+    font-size: 1em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
 }
