@@ -1,4 +1,5 @@
 h1{
+    text-align: center;
     color: red;
 }
 .completed{
@@ -7,4 +8,36 @@ h1{
 }
 .not{
     text-decoration: underline;
+}
+
+ul {
+    border-top: 1px solid grey;
+    padding: 30px;
+}
+
+li {
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+    margin-left: 40px;
+    width: 70%;
+    font-size: 1.5em;
+    list-style-type: circle;
+}
+
+li::marker {
+    font-size: 1.5em;
+}
+
+/* Making the cursor change to a pointer on the li elements so user can visually see a clicking action is available */
+span {
+    cursor: pointer;
+}
+
+a {
+    /* Moving logout to the top right corner */
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    text-decoration: none;
+    font-size: 1.2em;
 }
