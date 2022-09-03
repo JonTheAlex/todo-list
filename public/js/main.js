@@ -67,3 +67,10 @@ async function markIncomplete(){
         console.log(err)
     }
 }
+
+// Font selector
+const fontSelector = document.getElementById('font-selector');
+
+fontSelector.addEventListener('change', (event) => {
+    document.body.style.fontFamily = event.target.value;
+});
