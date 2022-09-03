@@ -59,3 +59,14 @@ input {
     margin: 0 auto;
     margin-bottom: 10px;
 }
+
+/* Background color picker */
+.white{
+    background-color: white;
+}
+.green {
+    background-color: green;
+}
+.red {
+    background-color: red;
+}
