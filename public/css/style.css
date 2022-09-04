@@ -24,7 +24,13 @@ h2 {
     color: gray;
 }
 
+.hero {
+    text-align: center;
+}
 
+.heroLinks {
+    padding: 10px;
+}
 
 ul {
     border-top: 1px solid grey;
@@ -73,31 +79,6 @@ input {
     margin-bottom: 10px;
 }
 
-
-
-/* custom styling for login page */
-
-.form-signin {
-    max-width: 330px;
-    padding: 15px;
-}
-
-.form-signin .form-floating:focus-within {
-    z-index: 2;
-}
-
-.form-signin input[type="email"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-    margin-bottom: 10px;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
-
 /* form styling */
 
 
@@ -133,7 +114,7 @@ input {
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
+    background: rgb(232, 240, 254);
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
@@ -151,27 +132,6 @@ form.form1 {
     padding-top: 40px;
 }
 
-.pass {
-    width: 76%;
-    color: rgb(38, 50, 56);
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    background: rgba(136, 126, 126, 0.04);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.02);
-    margin-bottom: 50px;
-    margin-left: 46px;
-    text-align: center;
-    margin-bottom: 27px;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-
 .un:focus,
 .pass:focus {
     border: 2px solid rgba(0, 0, 0, 0.18) !important;
@@ -184,14 +144,14 @@ form.form1 {
     color: #fff;
     background: linear-gradient(to right, #005f73, #0a9396);
     border: 0;
-    padding: 15px 60px;
+    padding: 10px 40px;
     font-family: 'Ubuntu', sans-serif;
     margin-left: 35%;
     font-size: 13px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
 
-a {
+/* a {
     text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
     color: #0a9396;
     text-decoration: none
@@ -199,9 +159,4 @@ a {
 
 a:hover {
     color: #000000;
-}
-
-@media (max-width: 600px) {
-    .main {
-        border-radius: 0px;
-    }
+} */
