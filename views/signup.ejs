@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign Up</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/adb87a038e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/signup" method="POST">
+        <% messages.errors.forEach( el=> { %>
+            <div class="alert alert-danger">
+                <%= el.msg %>
+            </div>
+            <% }) %>
+                <% } %>
+                    <!-- <form action="/signup" method="POST">
         <input type="text" name="userName" placeholder="User Name">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
         <input type="password" name="confirmPassword" placeholder="Confirm Password">
         <input type="submit">
-    </form>
+    </form> -->
+                    <div class="main-signup">
+                        <p class="sign" align="center">Create an Account</p>
+                        <form class="form1">
+                            <input class="un" type="text" name="userName" placeholder="Username">
+                            <input class="un" type="email" name="email" placeholder="Email">
+                            <input class="pass" type="password" name="password" align="center" placeholder="Password">
+                            <input class="pass" type="password" name="confirmPassword" align="center"
+                                name="confirmPassword" placeholder="Confirm Password">
+                            <a class="submit" align="center">Submit</a>
+
+
+                    </div>
+
 </body>
+
 </html>
