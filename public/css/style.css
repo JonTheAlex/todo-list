@@ -20,17 +20,23 @@ ul {
 }
 
 li {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid Grey;
     padding: 10px 0;
     margin: 0 auto;
     width: 70%;
     max-width: 800px;
     font-size: 1.5em;
     list-style-type: circle;
+    vertical-align: center;
 }
 
 li::marker {
     font-size: 1.5em;
+}
+
+/* Add striping every other li element */
+li:nth-child(even) {
+    background-color: hsla(30, 14%, 95%, .4);
 }
 
 img {
@@ -59,14 +65,23 @@ input {
     margin: 0 auto;
     margin-bottom: 10px;
 }
+.select-font, .select-color {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 50px;
+  }
 
 /* Background color picker */
-.white{
-    background-color: white;
+
+
+.settings-icon {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    height: 1.5em;
 }
-.green {
-    background-color: green;
-}
-.red {
-    background-color: red;
+
+/* Class to make elements hidden */
+.hidden {
+    display: none;
 }

@@ -67,3 +67,22 @@ async function markIncomplete(){
         console.log(err)
     }
 }
+// Font selector
+const fontSelector = document.getElementById('font-selector');
+
+fontSelector.addEventListener('change', (event) => {
+    document.body.style.fontFamily = event.target.value;
+});
+
+// Color selector
+const colorSelector = document.getElementById('color-selector');
+
+colorSelector.addEventListener('change', (event) => {
+    document.body.style.backgroundColor = event.target.value;
+});
+
+// Settings Menu
+document.querySelector('.settings-icon').addEventListener('click', visible)
+function visible(){
+    document.querySelector('#settings').classList.toggle('hidden')
+}
