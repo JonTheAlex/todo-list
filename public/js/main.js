@@ -45,6 +45,7 @@ async function markComplete(){
         const data = await response.json()
         console.log(data)
         location.reload()
+        alert('Good Job! Keep Going!')
     }catch(err){
         console.log(err)
     }
@@ -63,6 +64,7 @@ async function markIncomplete(){
         const data = await response.json()
         console.log(data)
         location.reload()
+        alert('Added back to the list...')
     }catch(err){
         console.log(err)
     }
