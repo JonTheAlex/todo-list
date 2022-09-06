@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TODO List</title>
+    <script src="https://kit.fontawesome.com/adb87a038e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<<<<<<< HEAD
 <body class="green">
+=======
+
+<body>
+>>>>>>> 48cffc49878da1bb7b564645473755842ea7f585
     <h1>Todos</h1>
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+    <h2>
+        <%= user.userName %> has <%= left %> things left to do.
+    </h2>
     <ul>
-    <% todos.forEach( el => { %>
+        <% todos.forEach( el=> { %>
             <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.todo %></span>
                 <img class='del' src="assets/icons8-trash.png" alt="Delete">
             </li>
-    <% }) %>    
+            <% }) %>
     </ul>
 
 
     <form action="/todos/createTodo" method='POST'>
         <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
+        <input type="submit" class="submitTodo">
     </form>
 
+<<<<<<< HEAD
     <section id ="settings" class="hidden">
         <div class="select-font">
             <label for="font-selector">Select Font</label>
@@ -59,7 +69,32 @@
     </section>
     <a href="/logout">Logout</a>
     <img src="assets/icons8-settings.png" alt="Settings Gear" class="settings-icon">
+=======
+    <div class="select-font">
+        <label for="font-selector">Select Font</label>
+        <select id="font-selector">
+            <option value="Arial">Arial</option>
+            <option value="Bradley Hand">Bradley</option>
+            <option value="Brush Script MT">Brush</option>
+            <option value="Comic Sans MS">Comic Sans</option>
+            <option value="Courier">Courier</option>
+            <option value="Garamond">Garamond</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Impact">Impact</option>
+            <option value="Lucida">Lucida</option>
+            <option value="Palatino">Palatino</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Times">Times</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Verdana">Verdana</option>
+        </select>
+    </div>
+
+
+    <a href="/logout" class="logout">Logout</a>
+>>>>>>> 48cffc49878da1bb7b564645473755842ea7f585
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
