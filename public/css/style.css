@@ -57,6 +57,11 @@ li::marker {
   font-size: 1.5em;
 }
 
+/* Add striping every other li element */
+li:nth-child(even) {
+    background-color: hsla(30, 14%, 95%, .4);
+}
+
 .del {
   height: 0.8em;
   float: right;
@@ -78,16 +83,33 @@ a.logout {
 }
 
 input {
-  font-size: 1em;
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 10px;
+    font-size: 1em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.select-font, .select-color {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 50px;
+  }
+.select-color {
+  margin-bottom: 20px;
 }
 
-.select-font {
-  font-size: 1em;
-  text-align: center;
-  margin-top: 50px;
+/* Background color picker */
+
+
+.settings-icon {
+    position: absolute;
+    left: 40px;
+    top: 30px;
+    height: 1.5em;
+}
+
+/* Class to make elements hidden */
+.hidden {
+    display: none;
 }
 
 /*form styling*/

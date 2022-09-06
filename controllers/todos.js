@@ -1,3 +1,4 @@
+const Setting = require('../models/Setting')
 const Todo = require('../models/Todo')
 
 module.exports = {
@@ -42,6 +43,18 @@ module.exports = {
             console.log(err)
         }
     },
+    //To Change color of list background
+    // changeColor: async (req, res)=>{
+    //     try{
+    //         await Setting.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
+    //             color: req.body.color
+    //         })
+    //         console.log('Color Changed')
+    //         res.json('Color Changed')
+    //     }catch(err){
+    //         console.log(err)
+    //     }
+    // },
     deleteTodo: async (req, res)=>{
         console.log(req.body.todoIdFromJSFile)
         try{

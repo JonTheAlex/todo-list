@@ -1,6 +1,8 @@
 const passport = require('passport')
 const validator = require('validator')
 const User = require('../models/User')
+// Line used to connect our schema for use in this code as a object constructor
+const Setting = require('../models/Setting')
 
  exports.getLogin = (req, res) => {
     if (req.user) {
@@ -73,6 +75,12 @@ const User = require('../models/User')
       email: req.body.email,
       password: req.body.password
     })
+    // using setting schema to create setting object on user signup with default values of font arial and background white
+    const setting = new Setting ({
+      font: 'Arial',
+      color: 'White',
+      userId: req.user.id
+    })
   
     User.findOne({$or: [
       {email: req.body.email},
@@ -83,6 +91,8 @@ const User = require('../models/User')
         req.flash('errors', { msg: 'Account with that email address or username already exists.' })
         return res.redirect('../signup')
       }
+      // Code to save the above create seting object in MongoDB when user is created. 
+      setting.save()
       user.save((err) => {
         if (err) { return next(err) }
         req.logIn(user, (err) => {

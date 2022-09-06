@@ -30,28 +30,45 @@
         <input type="submit" class="submitTodo">
     </form>
 
-    <div class="select-font">
-        <label for="font-selector">Select Font</label>
-        <select id="font-selector">
-            <option value="Arial">Arial</option>
-            <option value="Bradley Hand">Bradley</option>
-            <option value="Brush Script MT">Brush</option>
-            <option value="Comic Sans MS">Comic Sans</option>
-            <option value="Courier">Courier</option>
-            <option value="Garamond">Garamond</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Impact">Impact</option>
-            <option value="Lucida">Lucida</option>
-            <option value="Palatino">Palatino</option>
-            <option value="Tahoma">Tahoma</option>
-            <option value="Times">Times</option>
-            <option value="Trebuchet MS">Trebuchet MS</option>
-            <option value="Verdana">Verdana</option>
-        </select>
-    </div>
-
-
-    <a href="/logout" class="logout">Logout</a>
+    <section id ="settings" class="hidden">
+        
+        <div class="select-font">
+            <label for="font-selector">Select Font</label>
+            <select id="font-selector" form="listColorFont">
+                <option value="Arial">Arial</option>
+                <option value="Bradley Hand">Bradley</option>
+                <option value="Brush Script MT">Brush</option>
+                <option value="Comic Sans MS">Comic Sans</option>
+                <option value="Courier">Courier</option>
+                <option value="Garamond">Garamond</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Impact">Impact</option>
+                <option value="Lucida">Lucida</option>
+                <option value="Palatino">Palatino</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Times">Times</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+        </div>
+        <div class="select-color">
+            <label for="color-selector">Select Color</label>
+            <select id="color-selector" name = 'color' form="listColorFont">
+                <option value="White">White</option>
+                <option value="Pink">Pink</option>
+                <option value="Yellow">Yellow</option>
+                <option value="Red">Red</option>
+                <option value="Purple">Purple</option>
+                <option value="Green">Green</option>
+            </select>
+        </div>
+        <!-- <form action="/todos/changeDisplay" method ='POST' id="listColorFont">    Fix later-->
+        <!-- <form id="listColorFont"> -->
+            <input type="submit" class="submitTodo submitSettings">
+        <!-- </form> -->
+    </section>
+    <a class = 'logout' href="/logout">Logout</a>
+    <img src="assets/icons8-settings.png" alt="Settings Gear" class="settings-icon">
 
     <script src="js/main.js"></script>
 </body>

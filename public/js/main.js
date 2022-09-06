@@ -69,10 +69,42 @@ async function markIncomplete(){
         console.log(err)
     }
 }
-
 // Font selector
 const fontSelector = document.getElementById('font-selector');
 
 fontSelector.addEventListener('change', (event) => {
     document.body.style.fontFamily = event.target.value;
 });
+
+// Color selector
+const colorSelector = document.getElementById('color-selector');
+
+colorSelector.addEventListener('change', (event) => {
+    document.body.style.backgroundColor = event.target.value;
+});
+
+// async function changeColor(){
+//     const todoId = this.parentNode.dataset.id
+//     try{
+//         const response = await fetch('todos/changeColor', {
+//             method: 'put',
+//             headers: {'Content-type': 'application/json'},
+//             body: JSON.stringify({
+//                 'todoIdFromJSFile': todoId
+//             })
+//         })
+//         const data = await response.json()
+//         console.log(data)
+//         location.reload()
+//         alert('You Donkey!')
+//     }catch(err){
+//         console.log(err)
+//     }
+// }
+
+// Settings Menu
+document.querySelector('.settings-icon').addEventListener('click', visible)
+document.querySelector('.submitSettings').addEventListener('click', visible)
+function visible(){
+    document.querySelector('#settings').classList.toggle('hidden')
+}
