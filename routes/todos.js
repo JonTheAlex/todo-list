@@ -8,6 +8,7 @@ router.get('/', ensureAuth, todosController.getTodos)
 router.post('/createTodo', todosController.createTodo)
 
 // ADD A POST FOR WHEN CREATE and when CHANGE SETTINGS
+// router.put('/changeColor', todosController.changeColor)
 
 router.put('/markComplete', todosController.markComplete)
 

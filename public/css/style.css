@@ -93,6 +93,9 @@ input {
     text-align: center;
     margin-top: 50px;
   }
+.select-color {
+  margin-bottom: 20px;
+}
 
 /* Background color picker */
 

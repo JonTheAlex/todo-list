@@ -9,12 +9,8 @@
     <script src="https://kit.fontawesome.com/adb87a038e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<<<<<<< HEAD
-<body class="green">
-=======
 
 <body>
->>>>>>> 48cffc49878da1bb7b564645473755842ea7f585
     <h1>Todos</h1>
     <h2>
         <%= user.userName %> has <%= left %> things left to do.
@@ -34,11 +30,11 @@
         <input type="submit" class="submitTodo">
     </form>
 
-<<<<<<< HEAD
     <section id ="settings" class="hidden">
+        
         <div class="select-font">
             <label for="font-selector">Select Font</label>
-            <select id="font-selector">
+            <select id="font-selector" form="listColorFont">
                 <option value="Arial">Arial</option>
                 <option value="Bradley Hand">Bradley</option>
                 <option value="Brush Script MT">Brush</option>
@@ -57,7 +53,7 @@
         </div>
         <div class="select-color">
             <label for="color-selector">Select Color</label>
-            <select id="color-selector">
+            <select id="color-selector" name = 'color' form="listColorFont">
                 <option value="White">White</option>
                 <option value="Pink">Pink</option>
                 <option value="Yellow">Yellow</option>
@@ -66,33 +62,13 @@
                 <option value="Green">Green</option>
             </select>
         </div>
+        <!-- <form action="/todos/changeDisplay" method ='POST' id="listColorFont">    Fix later-->
+        <!-- <form id="listColorFont"> -->
+            <input type="submit" class="submitTodo submitSettings">
+        <!-- </form> -->
     </section>
-    <a href="/logout">Logout</a>
+    <a class = 'logout' href="/logout">Logout</a>
     <img src="assets/icons8-settings.png" alt="Settings Gear" class="settings-icon">
-=======
-    <div class="select-font">
-        <label for="font-selector">Select Font</label>
-        <select id="font-selector">
-            <option value="Arial">Arial</option>
-            <option value="Bradley Hand">Bradley</option>
-            <option value="Brush Script MT">Brush</option>
-            <option value="Comic Sans MS">Comic Sans</option>
-            <option value="Courier">Courier</option>
-            <option value="Garamond">Garamond</option>
-            <option value="Georgia">Georgia</option>
-            <option value="Impact">Impact</option>
-            <option value="Lucida">Lucida</option>
-            <option value="Palatino">Palatino</option>
-            <option value="Tahoma">Tahoma</option>
-            <option value="Times">Times</option>
-            <option value="Trebuchet MS">Trebuchet MS</option>
-            <option value="Verdana">Verdana</option>
-        </select>
-    </div>
-
-
-    <a href="/logout" class="logout">Logout</a>
->>>>>>> 48cffc49878da1bb7b564645473755842ea7f585
 
     <script src="js/main.js"></script>
 </body>
