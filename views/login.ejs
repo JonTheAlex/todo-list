@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TODO Login</title>
+    <script src="https://kit.fontawesome.com/adb87a038e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <% if (locals.messages.info) { %>
-        <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/login" method="POST">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit">
-    </form>
+        <% messages.errors.forEach( el=> { %>
+            <div class="alert alert-danger">
+                <%= el.msg %>
+            </div>
+            <% }) %>
+                <% } %>
+                    <% if (locals.messages.info) { %>
+                        <% messages.info.forEach( el=> { %>
+                            <div class="alert alert-danger">
+                                <%= el.msg %>
+                            </div>
+                            <% }) %>
+                                <% } %>
+                                    <!-- <form action="/login" method="POST">
+                                        <input type="email" name="email" placeholder="Email">
+                                        <input type="password" name="password" placeholder="Password">
+                                        <input type="submit">
+                                    </form> -->
+                                    <div class="main">
+                                        <h1 class="sign" align="center">Please Sign in</h1>
+                                        <form action="/login" method="POST" class="form1">
+                                            <input class="un " type="email" name="email" align="center"
+                                                placeholder="Email">
+                                            <input class="un" type="password" name="password" align="center"
+                                                placeholder="Password">
+                                            <button class="submit" type="submit" align="center">Log In</button>
+
+                                            <h2><a href="/"><i class="fa-solid fa-house" align="center"></i></a></h2>
+
+                                    </div>
 </body>
+
 </html>

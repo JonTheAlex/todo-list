@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TODO List</title>
+    <script src="https://kit.fontawesome.com/adb87a038e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>Todos</h1>
-    <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+    <h2>
+        <%= user.userName %> has <%= left %> things left to do.
+    </h2>
     <ul>
-    <% todos.forEach( el => { %>
+        <% todos.forEach( el=> { %>
             <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='<%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.todo %></span>
                 <img class='del' src="assets/icons8-trash.png" alt="Delete">
             </li>
-    <% }) %>    
+            <% }) %>
     </ul>
 
 
     <form action="/todos/createTodo" method='POST'>
         <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        <input type="submit">
+        <input type="submit" class="submitTodo">
     </form>
 
     <div class="select-font">
@@ -44,10 +49,11 @@
             <option value="Verdana">Verdana</option>
         </select>
     </div>
-    
 
-    <a href="/logout">Logout</a>
+
+    <a href="/logout" class="logout">Logout</a>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
